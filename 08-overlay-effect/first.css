@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  html {
+    overflow: hidden;
+  }
+  .box {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .container {
+    width: 600px;
+    position: relative;
+  }
+  .desk {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: 800;
+    opacity: 0;
+    /* background-color: yellow; */
+    transition: all 0.3s;
+  }
+  .desk p {
+    font-size: 35px;
+    color: aqua;
+
+    margin-bottom: 20px;
+  }
+  .desk a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(39, 232, 13);
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 10px;
+  }
+  .desk a:hover {
+    background-color: rgb(44, 224, 20);
+    color: black;
+  }
+  .container::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.377);
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s;
+    transform: translateX(100%);
+    /* opacity: 0; */
+    opacity: 0;
+    visibility: hidden;
+  }
+  .container:hover::after {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 99%;
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+  .container:hover .desk {
+    z-index: 999;
+    opacity: 1;
+  }
+
+  img {
+    width: 100%;
+  }
