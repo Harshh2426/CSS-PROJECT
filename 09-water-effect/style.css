@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+  }
+  h1:nth-child(1){
+    position: absolute;
+    -webkit-text-stroke: 3px aqua;
+    color: transparent;
+  }
+  h1:nth-child(2){
+    color: aqua;
+    animation: water 2s infinite;
+  }
+  @keyframes water {
+    0%,100%{
+      clip-path: polygon(0% 100%, 0% 60%, 9% 60%, 16% 66%, 23% 71%, 31% 77%, 39% 76%, 48% 69%, 53% 62%, 63% 59%, 76% 63%, 83% 70%, 92% 75%, 97% 69%, 99% 62%, 99% 99%, 100% 100%);
+    }
+    50%{
+      clip-path: polygon(0% 99%, 0% 74%, 8% 74%, 19% 68%, 22% 59%, 27% 53%, 37% 54%, 44% 58%, 48% 63%, 53% 70%, 63% 73%, 71% 71%, 79% 61%, 85% 55%, 90% 48%, 98% 51%, 100% 99%);
+    }
+  }
