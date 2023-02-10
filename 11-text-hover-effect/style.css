@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .box {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    cursor: pointer;
+  }
+  h1 {
+    position: absolute;
+    font-size: 150px;
+    text-transform: uppercase;
+    
+  }
+  h1:nth-child(1) {
+    color: white;
+    transition: all 0.5s;
+  }
+  h1:nth-child(2) {
+    clip-path: polygon(1% 100%, 99% 1%, 99% 99%);
+    background-color: aqua;
+    transition: all 0.5s;
+  }
+  h1:nth-child(2):hover{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  h1:nth-child(1):hover~h1{
+    clip-path: polygon(32% 100%, 62% 100%, 100% 100%, 0% 100%);
+  }
