@@ -1,0 +1,66 @@
+*
+        {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            /* width: 100vw; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            overflow-x: hidden;
+        }
+        .wrapper{
+            display: flex;
+        }
+        .static{
+            font-size: 80px;
+            font-weight: 800;
+            color: white;
+        }
+        .dynamic{
+            
+            margin-left: 30px;
+            height: 90px;
+            line-height: 90px;
+            overflow: hidden;
+            /* background-color: violet; */
+        }
+        .dynamic li{
+            list-style: none;
+            font-size: 80px;
+            position: relative;
+            top: 0;
+            animation: up 8s steps(4) infinite;
+        }
+        @keyframes up {
+            100%{
+                top: -360px;
+            }
+            
+        }
+        .dynamic li span{
+            position: relative;
+        }
+        .dynamic li span::after{
+            content: "";
+            height: 100%;
+            width: 100%;
+            border-left: 5px solid black;
+            position: absolute;
+            left: 0;
+            background-color: aqua;
+            margin: 0 -40px 0 40px;
+            animation: slide 2s steps(10) infinite;
+            
+        }
+        @keyframes slide {
+            100%{
+                left: 100%;
+            
+            }
+        }
