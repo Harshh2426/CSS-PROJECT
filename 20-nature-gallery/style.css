@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mynerve", cursive;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: green;
+}
+.left-box {
+  flex-basis: 35%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.left-box h1 {
+  font-weight: 700;
+  font-size: 50px;
+  color: yellow;
+}
+.subheading {
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+}
+.right-box {
+  flex-basis: 50%;
+  height: 90vh;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  background-position: top;
+  background-size: cover;
+  /* border: 3px solid black; */
+  transition: all 0.3s;
+  background-color: hwb(60 9% 90% / 0.618);
+  background-blend-mode: overlay;
+  cursor: pointer;
+}
+.box:hover {
+  background-color: rgba(24, 23, 23, 0);
+  background-position: center;
+  color: #00000000;
+}
+
+.box-1 {
+  grid-area: 1/1/3/2;
+}
+.box-2 {
+  grid-area: 1/2/2/-1;
+}
+.box-3 {
+  grid-area: 2/2/3/3;
+}
+.box-4 {
+  grid-area: 2/3/4/-1;
+}
+.box-5 {
+  grid-area: 3/1/4/3;
+}
+.box-6 {
+  grid-area: 4/1/-1/2;
+}
+.box-7 {
+  grid-area: 4/2/-1/-1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .left-box {
+    flex-basis: 15%;
+    /* margin: 0px; */
+  }
+  .left-box h1 {
+    font-size: 40px;
+  }
+  .subheading {
+    font-size: 20px;
+  }
+  .right-box {
+    margin: 10px;
+    flex-basis: 85%;
+    width: 80%;
+    grid-gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    height: 1700px;
+  }
+  .left-box {
+    /* flex-basis: 200px; */
+    gap: 5px;
+  }
+  .right-box {
+    /* flex-basis: 1400px; */
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+  }
+  .box {
+    grid-row: span 1;
+    grid-column: span 3;
+  }
+}
