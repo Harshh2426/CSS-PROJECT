@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        .cont{
+            height: 90vh;
+            max-width: 1080px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            background-color: yellow;
+        }
+        header{
+            height: 20vh;
+            max-width: 100%;
+            background-color: red;
+            margin: 4px;
+        }
+        main{
+            height: 70vh;
+            max-width: 100%;
+            background-color: aqua;
+            margin: 4px;
+            display: flex;
+        }
+        aside{
+            /* height: 100%; */
+            flex-basis: 20%;
+            flex-grow: 1;
+            background-color: palegreen;
+            
+        }
+        section{
+            /* height: 100%; */
+            flex-grow: 1;
+            /* max-width: 30%; */
+            flex-basis: 55%;
+            background-color: rgb(152, 154, 251);
+        }
+        footer{
+            margin: 4px;
+            background-color: chartreuse;
+            height: 10vh;
+        }
+
+        @media screen  and (max-width: 800px){
+            main{
+                display: flex;
+                flex-direction: column;
+            }
+            .Aside1{
+                order: 3;
+                height: 20%;
+            }
+            .Aside2{
+                order: 2;
+                height: 50%;
+            }
+            .Aside3{
+                order: 1;
+                height: 20%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <header>
+            Header
+        </header>
+        <main>
+            <aside class="Aside1 aside">Aside1</aside>
+            <section class="Aside2 aside">Section</section>
+            <aside class="Aside3 aside">Aside2</aside>
+            
+        </main>
+        <footer>
+           footer
+        </footer>
+    </div>
+</body>
+</html>
