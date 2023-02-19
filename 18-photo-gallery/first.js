@@ -1,0 +1,22 @@
+let box=document.getElementsByClassName('box');
+box[0].addEventListener('click',()=>{
+    window.open("https://kidshealth.org/en/parents/flu-vs-cold.html","_blank");
+})
+box[1].addEventListener('click',()=>{
+    window.open("https://www.health.com/condition/infectious-diseases/coronavirus/will-cooking-food-kill-coronavirus","_blank");
+})
+box[2].addEventListener('click',()=>{
+    window.open("https://www.healthline.com/health/infection/coronavirus-temperature-range","_blank");
+})
+box[3].addEventListener('click',()=>{
+    window.open("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7454813/","_blank");
+})
+box[4].addEventListener('click',()=>{
+    window.open("https://www.india-briefing.com/news/india-international-travel-latest-rules-20683.html/","_blank");
+})
+box[5].addEventListener('click',()=>{
+    window.open("https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-mask/art-20485449","_blank");
+})
+box[6].addEventListener('click',()=>{
+    window.open("https://www.who.int/southeastasia/news/detail/15-10-2020-handwashing-an-effective-tool-to-prevent-covid-19-other-diseases#:~:text=With%20COVID%2D19%20transmission%20mainly,water%20is%20of%20critical%20importance.","_blank");
+})
